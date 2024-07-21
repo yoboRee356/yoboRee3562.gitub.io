@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shark Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    <nav>
+        <ul id="pageLinks">
+            <li><a href="#" id="pageSharks">Sharks</a></li>
+            <li><a href="#" id="pageFacts">Facts</a></li>
+            <li><a href="#" id="pageBiology">Biology</a></li>
+            <li><a href="#" id="pageHistory">History</a></li>
+            <li><a href="#" class="dropdown hidden">Dropdown Link</a></li>
+        </ul>
+        <button class="dropdown-toggle" onclick="toggleDropdown()">☰</button>
+    </nav>
+
+    <div id="sharkPage">Shark content...</div>
+    <div id="factsPage" style="display: none;">Facts content...</div>
+    <div id="biologyPage" style="display: none;">Biology content...</div>
+    <div id="historyPage" style="display: none;">History content...</div>
+
+    <div id="quiz"></div>
+    <div id="result"></div>
+    <button id="submit">Submit</button>
+    <button id="retry" style="display: none;">Retry</button>
+    <button id="showAnswer" style="display: none;">Show Answers</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

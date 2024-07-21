@@ -1,0 +1,91 @@
+/* Basic styles for the Shark Website */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+.cursor {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  pointer-events: none;
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Media query to hide dropdown link above min-width of 800px */
+@media (min-width: 800px) {
+  .dropdown {
+      display: inline;
+  }
+  .dropdown-toggle {
+      display: none;
+  }
+}
+
+/* Responsive navbar button */
+nav button {
+  display: none;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Show the button when screen width is less than 800px */
+@media (max-width: 800px) {
+  nav button {
+      display: block;
+  }
+
+  nav ul {
+      display: none;
+      flex-direction: column;
+  }
+
+  nav ul li {
+      display: block;
+      text-align: center;
+  }
+
+  nav ul.show {
+      display: flex;
+  }
+}
